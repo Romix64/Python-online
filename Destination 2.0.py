@@ -5,7 +5,7 @@ SLEVA = ('Svitavy', 'Ostrava',)
 
 # Pozdrav klienta
 print('=' * 42)
-print('Dobry den, vitejte v programu DESTINATIO =')
+print('Dobry den, vitejte v programu DESTINATION =')
 print('=' * 42)
 
 
@@ -27,14 +27,12 @@ ZVOLENI_DESTINACE = int(input('Zadej prosim cislo destinace: '))
 
 if ZVOLENI_DESTINACE > 6 or ZVOLENI_DESTINACE < 1:
     print('Chyba! V soucasne dobe nabizime pouze vyse uvedene destinace (1 - 6)')
-
-else:
-    index_ceny = CENY[ZVOLENI_DESTINACE -1]
-    index_destinace = DESTINACE[ZVOLENI_DESTINACE-1]
-    print('Vybral jste si destinaci: ', index_destinace)
+    exit()
 
 
-
+index_ceny = CENY[ZVOLENI_DESTINACE -1]
+index_destinace = DESTINACE[ZVOLENI_DESTINACE-1]
+print('Vybral jste si destinaci: ', index_destinace)
 if index_destinace in SLEVA:
     print('Cena destinace je se slevou 25%',)
     input('Stisknete ENTER pro pokracovani ')
