@@ -111,7 +111,7 @@ Vyber 4 ti umozni analyzovat vlastni text. Pokud chces program ukoncit, napis "k
     for slovo in system2.split():
         delka = len(slovo.strip(',.?!/*-;@'))
         if delka in cetnosti.keys():
-            cetnosti[delka] = cetnosti[delka]+1
+            cetnosti[delka] = cetnosti[delka] + 1
         else:
             cetnosti[delka] = 1
         muj_text1.append(slovo.strip(',.?!/*-;@'))
